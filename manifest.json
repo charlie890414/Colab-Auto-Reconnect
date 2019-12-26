@@ -1,0 +1,24 @@
+{
+  "name": "Colab Auto Reconnect",
+  "version": "1.0",
+  "description": "Tool to prevent unexpected disconnect",
+  "content_scripts": [  
+    {
+      "matches": [
+        "https://colab.research.google.com/drive/*"
+      ],
+      "js": [
+        "js/contentScript.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources" : [
+    "js/script.js"
+  ],
+  "icons": {
+    "512": "images/icon.png"
+  },
+  "manifest_version": 2
+}
